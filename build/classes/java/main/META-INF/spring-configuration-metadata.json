@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "app.fast-api",
+      "type": "com.lolchatbot.config.FastApiProperties",
+      "sourceType": "com.lolchatbot.config.FastApiProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.fast-api.base-url",
+      "type": "java.lang.String",
+      "sourceType": "com.lolchatbot.config.FastApiProperties"
+    },
+    {
+      "name": "app.fast-api.timeout-millis",
+      "type": "java.lang.Integer",
+      "sourceType": "com.lolchatbot.config.FastApiProperties",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}

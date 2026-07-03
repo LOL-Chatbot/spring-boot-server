@@ -1,0 +1,7 @@
+.git
+.github
+.gradle
+build
+*.log
+spring_boot_server.out.log
+spring_boot_server.err.log

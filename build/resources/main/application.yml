@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: lol-chatbot-back
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+app:
+  fast-api:
+    base-url: ${FASTAPI_BASE_URL:http://localhost:8000}
+    timeout-millis: ${FASTAPI_TIMEOUT_MILLIS:30000}
