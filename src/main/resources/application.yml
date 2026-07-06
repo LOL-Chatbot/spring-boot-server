@@ -20,6 +20,9 @@ springdoc:
     tags-sorter: alpha
 
 app:
+  swagger:
+    server-url: ${SWAGGER_SERVER_URL:http://54.116.196.184}
+    server-description: ${SWAGGER_SERVER_DESCRIPTION:EC2 개발 서버}
   fast-api:
     base-url: ${FASTAPI_BASE_URL:http://localhost:8000}
     timeout-millis: ${FASTAPI_TIMEOUT_MILLIS:30000}

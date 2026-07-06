@@ -4,6 +4,7 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.servers.Server;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,6 +16,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenApiConfig {
 
+    @Value("${app.swagger.server-url:http://54.116.196.184}")
+    private String serverUrl;
+
+    @Value("${app.swagger.server-description:EC2 개발 서버}")
+    private String serverDescription;
+
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
@@ -23,7 +30,7 @@ public class OpenApiConfig {
                         .description("Spring Boot 백엔드의 FastAPI 중계 및 앱용 API 문서입니다.")
                         .version("v1"))
                 .servers(List.of(new Server()
-                        .url("http://localhost:8080")
-                        .description("로컬 백엔드 서버")));
+                        .url(serverUrl)
+                        .description(serverDescription)));
     }
 }
