@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+
+.gradle/
+build/
+bin/
+out/
+
+*.log
+spring_boot_server.out.log
+spring_boot_server.err.log
+
+.idea/
+*.iml
